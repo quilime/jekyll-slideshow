@@ -1,0 +1,39 @@
+
+<div class="PageNavigation">
+  
+  <div class="bullet">
+    <a href="{{ site.baseurl }}/">&uarr;</a>
+  </div>
+  
+  <br />
+  
+  <div class="bullet">
+  {% if page.next.url %}
+    <a class="next button" href="{{site.baseurl}}{{page.next.url}}">&larr;</a>
+  {% else %}
+    &larr;
+  {% endif %}
+</div>
+  
+  
+  <!--  -->
+  {% for post in site.posts %}
+    <div class="bullet">
+    {% if include.post.url != post.url %}
+      <a href="{{post.url}}">•</a>
+    {% else %}
+      •
+    {% endif %}
+    </div>
+  {% endfor %}
+  </nav>
+  
+  <div class="bullet">
+  {% if page.previous.url %}
+    <a class="prev button" href="{{site.baseurl}}{{page.previous.url}}">&rarr;</a>
+  {% else %}
+    &rarr;
+  {% endif %}
+</div>
+  
+</div>

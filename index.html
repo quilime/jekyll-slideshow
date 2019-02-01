@@ -1,0 +1,10 @@
+---
+layout: default
+title: index
+---
+
+<div class="thumbs">
+{% for post in site.posts %}
+  {% include thumb.html post=post %}
+{% endfor %}
+</div>
