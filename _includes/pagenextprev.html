@@ -1,22 +1,19 @@
-
-<div class="PageNavigation">
+<div id="PageNavigation">
   
   <div class="bullet">
-    <a href="{{ site.baseurl }}/">&uarr;</a>
+    <a id="homeButton" href="{{ site.baseurl }}/">&uarr;</a>
   </div>
   
   <br />
   
   <div class="bullet">
   {% if page.next.url %}
-    <a class="next button" href="{{site.baseurl}}{{page.next.url}}">&larr;</a>
+    <a id="nextButton" class="next button" href="{{site.baseurl}}{{page.next.url}}">&larr;</a>
   {% else %}
     &larr;
   {% endif %}
-</div>
+  </div>
   
-  
-  <!--  -->
   {% for post in site.posts %}
     <div class="bullet">
     {% if include.post.url != post.url %}
@@ -30,7 +27,7 @@
   
   <div class="bullet">
   {% if page.previous.url %}
-    <a class="prev button" href="{{site.baseurl}}{{page.previous.url}}">&rarr;</a>
+    <a id="prevButton" class="prev button" href="{{site.baseurl}}{{page.previous.url}}">&rarr;</a>
   {% else %}
     &rarr;
   {% endif %}

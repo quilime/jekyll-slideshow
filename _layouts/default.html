@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ site.title }} {{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
   </head>
 
   <body>
 
-    <div class="site">
+    <div id="site">
       {{ content }}
     </div>
+
+    <script src="{{ site.baseurl }}/js/jquery-2.2.1.min.js"></script>
+    <script src="{{ site.baseurl }}/js/jquery.smoothState.min.js"></script>
+    <script src="{{ site.baseurl }}/js/main.js"></script>
 
   </body>
 
